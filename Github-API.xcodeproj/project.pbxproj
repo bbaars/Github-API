@@ -17,6 +17,11 @@
 		8FC3291025859D5E00BF7416 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3290F25859D5E00BF7416 /* APIError.swift */; };
 		8FC3291425859DF700BF7416 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3291325859DF700BF7416 /* EndPoint.swift */; };
 		8FC3291725859E2D00BF7416 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3291625859E2D00BF7416 /* Request.swift */; };
+		8FC3291C2585A11B00BF7416 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3291B2585A11B00BF7416 /* Commit.swift */; };
+		8FC329202585A12600BF7416 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3291F2585A12600BF7416 /* Author.swift */; };
+		8FC329232585A74700BF7416 /* Commit+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329222585A74700BF7416 /* Commit+Info.swift */; };
+		8FC329262585A76800BF7416 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329252585A76800BF7416 /* GithubService.swift */; };
+		8FC3292A2585A7A100BF7416 /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329292585A7A100BF7416 /* GithubEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		8FC3290F25859D5E00BF7416 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		8FC3291325859DF700BF7416 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		8FC3291625859E2D00BF7416 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8FC3291B2585A11B00BF7416 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		8FC3291F2585A12600BF7416 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		8FC329222585A74700BF7416 /* Commit+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+Info.swift"; sourceTree = "<group>"; };
+		8FC329252585A76800BF7416 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		8FC329292585A7A100BF7416 /* GithubEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,8 @@
 		8FC328F22585926200BF7416 /* Github-API */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3291A2585A10100BF7416 /* Model */,
+				8FC329192585A0F600BF7416 /* GithubService */,
 				8FC3290E25859D5100BF7416 /* Error */,
 				8FC3290925859D2C00BF7416 /* Request */,
 				8FC328F32585926200BF7416 /* AppDelegate.swift */,
@@ -93,6 +105,25 @@
 				8FC3290F25859D5E00BF7416 /* APIError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		8FC329192585A0F600BF7416 /* GithubService */ = {
+			isa = PBXGroup;
+			children = (
+				8FC329252585A76800BF7416 /* GithubService.swift */,
+				8FC329292585A7A100BF7416 /* GithubEndpoint.swift */,
+			);
+			path = GithubService;
+			sourceTree = "<group>";
+		};
+		8FC3291A2585A10100BF7416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FC3291F2585A12600BF7416 /* Author.swift */,
+				8FC3291B2585A11B00BF7416 /* Commit.swift */,
+				8FC329222585A74700BF7416 /* Commit+Info.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,12 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC329232585A74700BF7416 /* Commit+Info.swift in Sources */,
+				8FC3291C2585A11B00BF7416 /* Commit.swift in Sources */,
 				8FC3291425859DF700BF7416 /* EndPoint.swift in Sources */,
 				8FC328F82585926200BF7416 /* CommitTableViewController.swift in Sources */,
+				8FC329202585A12600BF7416 /* Author.swift in Sources */,
 				8FC328F42585926200BF7416 /* AppDelegate.swift in Sources */,
 				8FC3290B25859D3600BF7416 /* Result.swift in Sources */,
+				8FC3292A2585A7A100BF7416 /* GithubEndpoint.swift in Sources */,
 				8FC3291725859E2D00BF7416 /* Request.swift in Sources */,
 				8FC3291025859D5E00BF7416 /* APIError.swift in Sources */,
+				8FC329262585A76800BF7416 /* GithubService.swift in Sources */,
 				8FC328F62585926200BF7416 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

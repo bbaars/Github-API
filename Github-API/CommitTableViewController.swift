@@ -14,5 +14,21 @@ class CommitTableViewController: UITableViewController {
 
         title = "Vapor Commits"
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let service = GithubService()
+        service.getCommits { (result) in
+            switch result {
+            case .success(let commits):
+                print(commits)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
 }
 
