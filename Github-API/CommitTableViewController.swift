@@ -25,7 +25,7 @@ class CommitTableViewController: UITableViewController {
 
         let service = GithubService()
 
-        self.showProgressView {
+        showProgressView {
             service.getCommits { (result) in
                 self.hideProgressView {
                     switch result {

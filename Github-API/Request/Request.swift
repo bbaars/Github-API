@@ -47,6 +47,10 @@ class Request {
         task.resume()
     }
 
+    /// Download an image from the given url string
+    /// - Parameters:
+    ///   - urlString: The URL where the image is
+    ///   - completion: Completion of the result containing the data of the image or an error
     func download(from urlString: String, completion: @escaping (_ result: Result<Data>) -> Void) {
         guard let url = URL(string: urlString) else {
             return completion(.failure(.invalidURL(urlString)))
@@ -62,6 +66,7 @@ class Request {
                 if let data = data {
                     completion(.success(data))
                 } else {
+                    self.logger.error("There was no data returned for the image from url = \(url)")
                     completion(.failure(.unknown))
                 }
             }
