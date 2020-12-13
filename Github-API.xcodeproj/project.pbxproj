@@ -22,6 +22,9 @@
 		8FC329232585A74700BF7416 /* Commit+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329222585A74700BF7416 /* Commit+Info.swift */; };
 		8FC329262585A76800BF7416 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329252585A76800BF7416 /* GithubService.swift */; };
 		8FC3292A2585A7A100BF7416 /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329292585A7A100BF7416 /* GithubEndpoint.swift */; };
+		8FC3292F2585C16900BF7416 /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3292E2585C16900BF7416 /* CommitTableViewCell.swift */; };
+		8FC329332585C18800BF7416 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329322585C18800BF7416 /* ReusableCell.swift */; };
+		8FC329362585C19700BF7416 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329352585C19700BF7416 /* ConfigurableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		8FC329222585A74700BF7416 /* Commit+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+Info.swift"; sourceTree = "<group>"; };
 		8FC329252585A76800BF7416 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		8FC329292585A7A100BF7416 /* GithubEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
+		8FC3292E2585C16900BF7416 /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
+		8FC329322585C18800BF7416 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		8FC329352585C19700BF7416 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		8FC328F22585926200BF7416 /* Github-API */ = {
 			isa = PBXGroup;
 			children = (
+				8FC3292C2585C14F00BF7416 /* Cell */,
 				8FC3291A2585A10100BF7416 /* Model */,
 				8FC329192585A0F600BF7416 /* GithubService */,
 				8FC3290E25859D5100BF7416 /* Error */,
@@ -124,6 +131,32 @@
 				8FC329222585A74700BF7416 /* Commit+Info.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8FC3292C2585C14F00BF7416 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8FC329312585C17500BF7416 /* ReusableCell */,
+				8FC3292D2585C15D00BF7416 /* TableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8FC3292D2585C15D00BF7416 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8FC3292E2585C16900BF7416 /* CommitTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		8FC329312585C17500BF7416 /* ReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				8FC329322585C18800BF7416 /* ReusableCell.swift */,
+				8FC329352585C19700BF7416 /* ConfigurableCell.swift */,
+			);
+			path = ReusableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC329362585C19700BF7416 /* ConfigurableCell.swift in Sources */,
 				8FC329232585A74700BF7416 /* Commit+Info.swift in Sources */,
 				8FC3291C2585A11B00BF7416 /* Commit.swift in Sources */,
 				8FC3291425859DF700BF7416 /* EndPoint.swift in Sources */,
@@ -206,7 +240,9 @@
 				8FC3292A2585A7A100BF7416 /* GithubEndpoint.swift in Sources */,
 				8FC3291725859E2D00BF7416 /* Request.swift in Sources */,
 				8FC3291025859D5E00BF7416 /* APIError.swift in Sources */,
+				8FC3292F2585C16900BF7416 /* CommitTableViewCell.swift in Sources */,
 				8FC329262585A76800BF7416 /* GithubService.swift in Sources */,
+				8FC329332585C18800BF7416 /* ReusableCell.swift in Sources */,
 				8FC328F62585926200BF7416 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,4 +46,27 @@ class Request {
 
         task.resume()
     }
+
+    func download(from urlString: String, completion: @escaping (_ result: Result<Data>) -> Void) {
+        guard let url = URL(string: urlString) else {
+            return completion(.failure(.invalidURL(urlString)))
+        }
+
+        let session = URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                guard let httpResponse = response as? HTTPURLResponse,
+                      200..<300 ~= httpResponse.statusCode else {
+                    return completion(.failure(.badResponse))
+                }
+
+                if let data = data {
+                    completion(.success(data))
+                } else {
+                    completion(.failure(.unknown))
+                }
+            }
+        }
+
+        session.resume()
+    }
 }
