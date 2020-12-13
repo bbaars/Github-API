@@ -20,21 +20,26 @@ class CommitTableViewController: UITableViewController {
                            forCellReuseIdentifier: CommitTableViewCell.reuseIdentifier)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
         let service = GithubService()
-        service.getCommits { (result) in
-            switch result {
-            case .success(let commits):
-                self.commits = commits
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+
+        self.showProgressView {
+            service.getCommits { (result) in
+                self.hideProgressView {
+                    switch result {
+                    case .success(let commits):
+                        self.commits = commits
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                        break
+                    case .failure(let error):
+                        self.showErrorAlertView(withMessage: error.localizedDescription)
+                        break
+                    }
                 }
-                break
-            case .failure(let error):
-                print(error)
-                break
             }
         }
     }

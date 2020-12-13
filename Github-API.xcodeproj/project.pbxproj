@@ -25,6 +25,7 @@
 		8FC3292F2585C16900BF7416 /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC3292E2585C16900BF7416 /* CommitTableViewCell.swift */; };
 		8FC329332585C18800BF7416 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329322585C18800BF7416 /* ReusableCell.swift */; };
 		8FC329362585C19700BF7416 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329352585C19700BF7416 /* ConfigurableCell.swift */; };
+		8FC3293A2585D41400BF7416 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC329392585D41400BF7416 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8FC3292E2585C16900BF7416 /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
 		8FC329322585C18800BF7416 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		8FC329352585C19700BF7416 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		8FC329392585D41400BF7416 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		8FC328F22585926200BF7416 /* Github-API */ = {
 			isa = PBXGroup;
 			children = (
+				8FC329382585D40900BF7416 /* Extension */,
 				8FC3292C2585C14F00BF7416 /* Cell */,
 				8FC3291A2585A10100BF7416 /* Model */,
 				8FC329192585A0F600BF7416 /* GithubService */,
@@ -159,6 +162,14 @@
 			path = ReusableCell;
 			sourceTree = "<group>";
 		};
+		8FC329382585D40900BF7416 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8FC329392585D41400BF7416 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC3293A2585D41400BF7416 /* UIViewController+Extension.swift in Sources */,
 				8FC329362585C19700BF7416 /* ConfigurableCell.swift in Sources */,
 				8FC329232585A74700BF7416 /* Commit+Info.swift in Sources */,
 				8FC3291C2585A11B00BF7416 /* Commit.swift in Sources */,
