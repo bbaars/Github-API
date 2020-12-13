@@ -11,6 +11,10 @@ import os
 class Request {
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Request")
 
+    /// Performs a GET request to the following endpoint
+    /// - Parameters:
+    ///   - endpoint: The endpoint to get
+    ///   - completion: Completion the result type with either a success of failure
     func get<T: Codable>(_ endpoint: Endpoint, completion: @escaping (_ result: Result<T>) -> Void) {
         guard let url = endpoint.url else {
             return completion(.failure(.invalidURL(endpoint.url?.absoluteString)))
